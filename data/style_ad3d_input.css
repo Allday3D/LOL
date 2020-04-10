@@ -1,0 +1,85 @@
+/*----------------------------------------------------------*/
+
+
+.ad3d-input[type=text], input[type=password], input[type=number], select {
+    width: 100%;
+	height: 30px;
+    /* padding: 12px 20px; */
+	background-color: #686868;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #111111;
+    border-radius: 1px;
+    box-sizing: border-box;
+}
+
+.ad3d-input[type=text].readonly {
+    width: 100%;
+	height: 30px;
+    /* padding: 12px 20px; */
+	background-color: #272e30;;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #111111;
+    border-radius: 1px;
+    box-sizing: border-box;
+}
+
+.ad3d-input[type=text], input[type=color] {
+    width: 100%;
+	height: 30px;
+    /* padding: 12px 20px; */
+	background-color: #272e30;;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #111111;
+    border-radius: 1px;
+    box-sizing: border-box;
+}
+
+.ad3d-input[type=button]:enabled {
+    width: 100%;
+    background-color: #272e30;
+    /* color: white;
+    padding: 10px 10px; */
+    margin: 8px 0;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+button[type=submit], input[type=submit]:enabled {
+    width: 100%;
+    /* background-color: #686868; */
+    /*color: white;
+     padding: 14px 10px; */
+    margin: 8px 0;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.ad3d-input[type=checkbox]:focus
+{
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.ad3d-input[type=checkbox]
+{
+    background-color: #686868;
+    border-radius: 2px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+}
+
+.ad3d-input[type=checkbox]:checked
+{
+    background-color: #282828;
+    background: #282828 url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 3px 3px no-repeat;
+}

@@ -1,0 +1,40 @@
+/*----------------------------------------------------------*/
+
+.inputs-list {
+	margin: 10px;
+	float: right;
+	width: 45%;
+	}
+
+.color-canvas {
+	margin: 10px;
+	float: left;
+	width: 45%;
+	}
+
+
+.multi-input {
+    border: 2px solid rgba(70, 70, 70, 0.18);
+    box-sizing: border-box;
+    text-align : right;
+}
+
+.multi-input.selected {
+    
+    border: 2px solid #000;
+}
+
+/*----------------------------------------------------------*/
+
+#ad3d-colorwheeldisplay{
+  padding: 10px 10px 10px 40px;
+  border-radius: 2px;
+}
+
+#ad3d-colorwheeldisplay::before{
+  content: 'Select a Color';
+  color: #ffffff;
+  text-shadow: 0 0 4px #333333;
+}
+
+/*----------------------------------------------------------*/

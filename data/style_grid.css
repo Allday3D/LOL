@@ -1,0 +1,132 @@
+
+.wrapper {
+  margin-left:  auto;
+  margin-right: auto;
+  max-width: 800px;
+  margin: 0 10px;
+  display: grid;
+  /* justify-content: space-evenly; */
+  align-content: center;
+  padding-right: 10px;
+  padding-left:  10px;
+  grid-gap: 10px;
+}
+
+@media screen and (min-width: 600px) {
+
+  .wrapper {
+    margin: 0 auto;
+	align-content: center;
+	grid-template-rows: 100px auto auto auto auto;
+    grid-template-columns: 25% 25% 25% 25%;
+	/* grid-template-rows: 80px 280px 280px 60px;
+    grid-template-columns: 280px 280px; */
+  }
+  
+  /* no grid support? */
+    .stateinfocolom {
+    float: left;
+	grid-column: 1 / -1;
+  }
+  
+    .settingscolom {
+    float: left;
+	grid-column: 1 / -1;
+  }
+
+    .colwheelcolom {
+    float: right;
+	grid-column: 1 / -1;
+  }
+  
+    .colslidecolom {
+    float: left;
+	grid-column: 1 / -1;
+  }
+   
+  .tempgaugecolom {
+  float: left;
+   /*   width: 19.1489%; */
+  }
+
+  .humgaugecolom {
+    float: left;
+    /* width: 19.1489%; */
+  }
+
+  .presgaugecolom {
+    float: left;
+    /* width: 19.1489%; */
+  }
+  
+    .luxgaugecolom {
+    float: left;
+    /* width: 19.1489%; */
+  }
+
+    .infocol5 {
+    float: left;
+	grid-column: 1 / -1;
+  }
+  
+	.color-canvas {
+		margin: 0 auto;
+		align-content: center;
+	width: 90%;
+	}
+
+  
+  .header, .footer {
+    grid-column: 1 / -1;
+    /* needed for the floated layout */
+    clear: both;
+  }
+
+}
+
+.wrapper > * {
+  /* background-color: #282828; */
+  background-color: #7f7f7f;
+  color: #fff;
+  border-radius: 5px;
+
+  padding: 14px;
+  font-size: 100%;
+  /* needed for the floated layout
+  margin-bottom: 10px;*/
+
+}
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+  .wrapper > * {
+    width: auto;
+    margin: 0;
+  }
+}
+
+
+
+header h1 {
+	text-indent: 10px;
+    text-align: left;
+    font-size: 2em;
+    color: #282828;
+    padding-bottom: 1px;
+	padding-top: 0px;
+}
+
+footer h1 {
+    text-align: left;
+    font-size: 0.8em;
+    color: #282828;
+    padding-bottom: 1px;
+	padding-top: 4px;
+}
+
+header img {
+    width: 72px;
+    margin-top: -3px;
+	margin-right: 4px;
+    float: left;
+}

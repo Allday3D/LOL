@@ -1,0 +1,112 @@
+/*----------------------------------------------------------*/
+
+a.ad3d-button,
+a.ad3d-button:link,
+a:link.ad3d-button:link,
+body a.ad3d-button:link,
+a.ad3d-button:visited,
+body a.ad3d-button:visited,
+input.ad3d-button,
+button.ad3d-button
+{
+   text-decoration: none;
+   font-size: 12px;
+   font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+   font-weight: normal;
+   font-style: normal;
+   text-transform: uppercase;
+   position:relative;
+   display: inline-block;
+   vertical-align: middle;
+   white-space: nowrap;
+   text-align: center;
+   background-color: #686868;
+   -webkit-border-radius:6px;
+   -moz-border-radius:6px;
+   border-radius:6px;
+   border:0px dotted transparent;
+   color: #282828;
+   margin: 0 1px 0 0 !important;
+   overflow: visible;
+   cursor: pointer;
+   text-indent: 0;
+   line-height: 20px;
+}
+
+.ad3d-button img
+{
+   margin: 0;
+   vertical-align: middle;
+}
+
+.firefox2 .ad3d-button
+{
+   display: block;
+   float: left;
+}
+
+input, select, textarea, a.ad3d-search-button span
+{
+   vertical-align: middle;
+   font-size: 12px;
+   font-family: Tahoma, Arial, Helvetica, Sans-Serif;
+   font-weight: bold;
+   font-style: normal;
+   text-transform: uppercase;
+}
+
+.ad3d-block select 
+{
+   width:96%;
+}
+
+input.ad3d-button
+{
+   float: none !important;
+   -webkit-appearance: none;
+}
+
+.ad3d-button.active, .ad3d-button.active:hover
+{
+   background: #345056;
+   -webkit-border-radius:6px;
+   -moz-border-radius:6px;
+   border-radius:6px;
+   border:0px dotted transparent;
+   padding:0 5px;
+   margin:0 auto;
+}
+.ad3d-button.active, .ad3d-button.active:hover {
+   color: #282828 !important;
+}
+
+.ad3d-button.hover, .ad3d-button:hover
+{
+   background: red;
+   -webkit-border-radius:6px;
+   -moz-border-radius:6px;
+   border-radius:6px;
+   border:0px dotted transparent;
+   padding:0 5px;
+   margin:0 auto;
+}
+.ad3d-button.hover, .ad3d-button:hover {
+   color: grey !important;
+}
+
+
+.ad3d-hideShowButton {
+    color: #ffff83;
+	background-color: #272e30;
+    padding: 5px 6px 5px 6px;
+    border-radius: 4px;
+    border: 2px solid #999999;
+    cursor: pointer;
+    box-shadow: none;
+    font-weight: bold;
+	font-size: 52%;
+	position: relative;
+    /* Adjust these values accordingly*/
+    top: -3px;
+    left: 5px;
+}

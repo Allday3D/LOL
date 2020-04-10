@@ -1,0 +1,64 @@
+.ad3d-select {
+  font: 400 12px/1.3 sans-serif;
+  -webkit-appearance: none;
+  appearance: none;
+  color: #686868;
+  border: 1px solid #111111;
+  /*border: 1px dotted #607276;*/
+  line-height: 1;
+  outline: 0;
+  width: 99%;
+  height: 30px;
+  padding: 0.65em 2.5em 0.55em 0.75em;
+  border-radius: 2px;
+  background-color: #282828;
+  background-image: linear-gradient(#686868, #686868),
+    linear-gradient(-135deg, transparent 50%, #686868 50%),
+    linear-gradient(-225deg, transparent 50%, #686868 50%),
+    linear-gradient(#686868 42%, black 42%);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+  background-position: right 20px center, right bottom, right bottom, right bottom;   
+}
+
+.ad3d-select:hover {
+  background-image: linear-gradient(black, black),
+    linear-gradient(-135deg, transparent 50%, black 50%),
+    linear-gradient(-225deg, transparent 50%, black 50%),
+    linear-gradient(black 42%, #686868 42%);
+}
+
+.ad3d-select:active {
+  background-image: linear-gradient(black, black),
+    linear-gradient(-135deg, transparent 50%, black 50%),
+    linear-gradient(-225deg, transparent 50%, black 50%),
+    linear-gradient(black 42%, #686868 42%);
+  color: #686868;
+  border-color: black;
+  background-color: black;
+}
+
+.ad3d-color {
+  font: 400 12px/1.3 sans-serif;
+  -webkit-appearance: none;
+  appearance: none;
+  /*color: #686868;*/
+  border: 1px solid #111111;
+  /*border: 1px dotted #607276;*/
+  line-height: 1;
+  outline: 0;
+  width: 100%;
+  height: 30px;
+  padding: 0.65em 2.5em 0.55em 0.75em;
+  margin: 4px;
+  border-radius: var(--radius);
+  float: right;
+  /*background-color: #282828;
+  background-image: linear-gradient(#686868, #686868),
+    linear-gradient(-135deg, transparent 50%, #686868 50%),
+    linear-gradient(-225deg, transparent 50%, #686868 50%),
+    linear-gradient(#686868 42%, black 42%);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+  background-position: right 20px center, right bottom, right bottom, right bottom;*/   
+}

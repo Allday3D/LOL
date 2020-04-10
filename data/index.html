@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US"><head><!-- Created by AD3D -->
+	<meta charset="utf-8">
+	<title>LOL-01</title>
+	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon_144x144.png">
+    <link rel="icon" type="image/png" sizes="144x144"  href="/favicon_144x144.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.ico">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	
+	<link rel="stylesheet" href="style_lolmain.css">
+	<link rel="stylesheet" href="style_grid.css">
+	<link rel="stylesheet" href="style.responsive.css">
+	<link rel="stylesheet" href="style_ad3d_text.css">
+	<link rel="stylesheet" href="style_ad3d_select.css">
+	<link rel="stylesheet" href="style_ad3d_input.css">
+	<link rel="stylesheet" href="style_ad3d_button.css">
+	<link rel="stylesheet" href="style_rgbwheel.css">
+	
+	<script src="jquery.min.js"></script>
+	
+	<script src="script_mes.js"></script>
+	<script src="html5kellycolorpicker.min.js"></script>
+
+</head>
+<body onload="startTime(), beginPage()">
+
+<div class="wrapper">
+	<header class="header">
+		<h1><a href="https://github.com/Allday3D" target="_blank"><img src="favicon_144x144.png"></a>LOL-01</h1>
+			<div id="txt1" style="font-family:'Orator Std'; color: #dcdcdc; font-size: 12pt; text-align: left; font-weight: bold; margin-left: 86px"></div>
+	</header>
+
+	<!--
+	<article class="stateinfocolom">
+		<a id="homeIconLink" href="."><img src="update.png" title="reload page" style="max-width:34px; float: right; margin-bottom: 20px; margin-right: 10px; margin-left: 20px; border-style:none" alt="" /></a>
+			<h5>Status <img class="middle" id="loading_icon" style="max-width:24px; border-style:none" alt="Loading icon" src="loader.gif" class="icon"/></h5>
+				<div class="settings"><table class="valueStyle" id="curstatus" style="font-family:'Orator Std'; color: #dcdcdc; font-size: 12pt; text-align: left;"><tr><td>Waiting for refresh, updates every 10 seconds.....</td></tr></table></div>
+					<input id="fstatusLineCount" type="hidden" name="statusLineCount" value="0"/>
+	</article>
+-->
+	<article class="colwheelcolom">
+		<h4>Color wheel 
+			<button id="monitoring_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('monitoringForm',this)" title="Show/Hide Settings">-</button></h1>
+				<div id="monitoring_settings" class="settings">
+					<form id="monitoringForm" method="POST">
+						<input type="hidden" name="settings" value="monitoring_settings">
+						<p style="font-family:'Orator Std'; color: #dcdcdc; font-size: 12pt; text-align: left;">current color:<input id="color" placeholder="Select color" value=""></p>
+							<div class="color-wrap">
+								<div id="ad3d-colorwheeldisplay" style="background-color: rgb(220, 220, 220);">
+								</div>
+							</div>
+
+							<div class="color-canvas">
+							<canvas id="canvas"></canvas>
+							</div>
+							
+							<div class="inputs-list">
+								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#ff0000" style="background-color:#ff0000;">
+								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#ff00ff" style="background-color:#ff00ff;">
+								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#00ff00" style="background-color:#00ff00;">
+								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#ffff00" style="background-color:#ffff00;">
+								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#0000ff" style="background-color:#0000ff;">
+								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#00ffff" style="background-color:#00ffff;">
+							</div>
+					<script>
+						var picker = new KellyColorPicker({ 
+							place : 'canvas',
+							method : 'triangle',
+							size : '240',			
+							userEvents : { 
+                
+								change : function(self) {
+                    
+                        // work with your own variables that describe current selected input
+                        
+                        if (!self.selectedInput) return;
+                        if (self.getCurColorHsv().v < 0.5)
+                            self.selectedInput.style.color = "#FFF";
+                        else
+                            self.selectedInput.style.color = "#000";
+							
+						// document.getElementById('ad3d-colorwheeldisplay') = self.getCurColorHex();
+
+                        self.selectedInput.value = self.getCurColorHex();    
+                        self.selectedInput.style.background = self.selectedInput.value;   
+                        
+                    }
+                    
+                }
+            });
+
+            // addition user methods \ variables 
+
+            picker.editInput = function(target) {
+
+                if (picker.selectedInput) picker.selectedInput.classList.remove('selected');   
+                if (target) picker.selectedInput = target;
+                if (!picker.selectedInput) return false;
+                
+                picker.selectedInput.classList.add('selected');    
+                picker.setColor(picker.selectedInput.value);
+            }
+
+            // initialize 
+
+            var mInputs = document.getElementsByClassName('multi-input');
+            for (var i = 0; i < mInputs.length; i++) {
+                picker.editInput(mInputs[i]);
+            }
+
+			
+
+            </script>
+					
+					</form>
+				</div>
+	</article>
+
+
+	<!-- <article class="colslidecolom">
+		
+		<h4>Color settings 
+			<button id="color_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('color_settings',this)" title="Show/Hide Settings">+</button></h4>
+				<div class="settings">
+					<label id="colorResponseText"></label>
+						<form id="color_settings" style="display:none" method="POST">
+		
+							<div class="ad3d-sliders">
+							<div class="color-wrap">
+								<div id="ad3d-colordisplay" style="background-color: rgb(255, 255, 131);"></div>
+							</div>
+								<div class="ad3d-sliders">
+								<div>
+									<label for="red" class="ad3d-colorlabel" style="background: rgb(255, 0, 0) none repeat scroll 0% 0%;">Red</label>
+									<input type="number" id="redNum" value="200">
+									<input value="255" type="range" min="0" max="255" id="red" style="background: rgb(200, 0, 0) none repeat scroll 0% 0%;">
+								</div>
+								<div>
+									<label for="green" class="ad3d-colorlabel" style="background: rgb(0, 255, 0) none repeat scroll 0% 0%;">Green</label>
+									<input type="number" id="greenNum" value="130">
+									<input value="255" type="range" min="0" max="255" id="green" style="background: rgb(0, 130, 0) none repeat scroll 0% 0%;">
+								</div>
+								<div>
+									<label for="blue" class="ad3d-colorlabel" style="background: rgb(0, 0, 131) none repeat scroll 0% 0%;">Blue</label>
+									<input type="number" id="blueNum" value="180">
+									<input value="131" type="range" min="0" max="255" id="blue" style="background: rgb(0, 0, 180) none repeat scroll 0% 0%;">
+								</div>
+								</div>
+							</div>
+						</form>
+				</div>
+    
+	</article> -->
+	
+	
+	<article class="settingscolom">
+		<h4>Wi-Fi 
+			<button id="wifi_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('wifi_settings',this)" title="Show/Hide Settings">+</button></h4>
+				<div class="settings">
+					<label id="wifiResponseText"></label>
+						<form id="wifi_settings" style="display:none" method="POST">
+							<input type="hidden" name="settings" value="wifi_settings">
+								<table width="100%">
+									<tr>
+										<td class="titlewidth">Network (SSID)</td>
+										<td><input type="text" class="ad3d-input" id="fssid" name="ssid" maxlength="50"></td>
+									</tr>
+									<tr>
+										<td>Network Password</td>
+										<td id="fpassstr"><input type="password" class="ad3d-input" id="fpass" name="pass" maxlength="50"></td>
+									</tr>
+									<tr>
+										<td class="checkboxrow">Unprotected</td>
+										<td class="checkboxrow"><input type="checkbox" class="ad3d-input" id="funprotected" name="unprotected" onclick="unprotectedCheckbox()"></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td><input class="ad3d-button" style="width: 100%; height:40px; float: right;" title="connect to wifi" type="submit" id="fWifiSubmit" value="Submit"></td>
+									</tr>
+								</table>
+						</form>
+				</div>
+		<hr>				
+		<h4>MQTT 
+			<button id="mqtt_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('mqtt_settings',this)" title="Show/Hide Settings">+</button></h4>
+				<div class="settings">
+					<label id="mqttResponseText"></label>
+						<form id="mqtt_settings" style="display:none" method="POST">
+							<input type="hidden" name="settings" value="mqtt_settings">
+								<table width="100%">
+									<tr>
+										<td class="titlewidth">MQTT Host Name <img class="middle" style="max-width:17px;" src="info-icon.png" alt="Automatically generated from Sensor Name" 
+											title="Automatically generated from the device name"/></td>
+										<td colspan="2"><input type="text" class="ad3d-input" id="fmqtt_host" style="background-color:#272e30; " name="mqtt_host" maxlength="50" readonly="readonly"></td>
+									</tr>
+									<tr>
+										<td>MQTT Broker Port Number and Address</td>
+										<td width="20%"><input type="number" class="ad3d-input" step=1 id="fmqtt_port" name="mqtt_port"></td>
+										<td><input type="text" class="ad3d-input" id="fmqtt_broker" name="mqtt_broker" maxlength="50"></td>
+									</tr>
+									<tr>
+										<td>MQTT User Name</td>
+										<td colspan="2"><input type="text" class="ad3d-input" id="fmqtt_user" name="mqtt_user" maxlength="50"></td>
+									</tr>
+									<tr>
+										<td>MQTT Password</td>
+										<td colspan="2"><input type="password" id="fmqtt_pass" name="mqtt_pass" maxlength="50"></td>
+									</tr>
+									<tr>
+										<td>MQTT Topic</td>
+										<td colspan="2"><input type="text" class="ad3d-input" id="fmqtt_topic" name="mqtt_topic" maxlength="50"></td>
+									</tr>
+									<tr>
+										<td class="checkboxrow">MQTT Enabled</td>
+										<td class="checkboxrow" colspan="2" class="left"><input type="checkbox" class="ad3d-input" id="fmqtt_isEnabled" name="mqtt_isEnabled"></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td colspan="2"><input class="ad3d-button" style="width: 100%; height:40px; float: right;" title="submit the config" type="submit" id="fmqttSubmit" value="Submit"></td>
+									</tr>
+								</table>
+						</form>
+				</div>
+	<hr>
+		<h4>Network Time Server 
+			<button id="ntp_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('ntp_settings',this)" title="Show/Hide Settings">+</button></h4>
+				<div class="settings">
+					<label id="ntpResponseText"></label>
+						<form id="ntp_settings" style="display:none" method="POST">
+							<input type="hidden" name="settings" value="ntp_settings">
+								<table width="100%">
+									<tr>
+										<td class="titlewidth">Time Server</td>
+										<td><br/></td>
+										<td><input type="text" class="ad3d-input" id="fntpServerName" name="ntpServerName" maxlength="50"></td>
+									</tr>
+									<tr>
+										<td class="titlewidth">Offset</td>
+										<td><br/></td>
+										<td><select class="ad3d-select" id="ftimeZone" name="timeZone">
+											<option value="-12">-12:00</option>
+											<option value="-11">-11:00</option>
+											<option value="-10">-10:00</option>
+											<option value="-9">-09:00</option>
+											<option value="-8">-08:00</option>
+											<option value="-7">-07:00</option>
+											<option value="-6">-06:00</option>
+											<option value="-5">-05:00</option>
+											<option value="-4">-04:00</option>
+											<option value="-3">-03:00</option>
+											<option value="-2">-02:00</option>
+											<option value="-1">-01:00</option>
+											<option value="0">00:00</option>
+											<option selected="selected" value="1">+01:00</option>
+											<option value="2">+02:00</option>
+											<option value="3">+03:00</option>
+											<option value="4">+04:00</option>
+											<option value="5">+05:00</option>
+											<option value="6">+06:00</option>
+											<option value="7">+07:00</option>
+											<option value="8">+08:00</option>
+											<option value="9">+09:00</option>
+											<option value="10">+10:00</option>
+											<option value="11">+11:00</option>
+											<option value="12">+12:00</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>Daylight Saving Mode</td>
+										<td><br/></td>
+										<td><select class="ad3d-select" id="fisDaylightSavingMode" name="isDaylightSavingMode">
+											<option value="off">no</option>
+											<option value="on">yes</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td><br/></td>
+										<td><input class='ad3d-button' style="width:100%; height: 50px; float: right;" title="submit the config" type="submit" id="fNTPSubmit" value="Submit"></td>
+									</tr>
+								</table>
+						</form>
+				</div>
+		</article>
+	
+	<footer class="footer">
+		<h1>Made by <a href="https://www.allday-3d.com" target="_blank">AD3D</a>.
+		<button class='ad3d-button' style="width:20px; height: 20px; float: right;" title="reset the device" id="frestart" name="restart" onclick="restartESP()" value="Restart"></button></h1>
+	</footer>
+</div>
+
+</body>
+</html>
