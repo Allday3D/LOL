@@ -13,4 +13,5 @@ Test: https://allday-3d.com//test_case/data/index.html
 
 ## TO DO
 
+- write some software for the ESP8266 to recieve a status about the current color.
 - Place the canvas (with the color picker) centered when width is less then.. 400px (for example)
