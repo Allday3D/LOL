@@ -9,7 +9,7 @@ Many thanks to NC22 for this fantastic color picker:https://github.com/NC22/HTML
 It's work in progress.
 ### Example.
 
-<a href="//Allday3D.github.io/LOL/blob/master/data/index.html">An example</a>
+<a href="//Allday3D.github.io/LOL/data/index.html">An example</a>
 
 ## TO DO
 
