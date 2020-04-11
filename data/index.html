@@ -45,7 +45,7 @@
 				<div id="monitoring_settings" class="settings">
 					<form id="monitoringForm" method="POST">
 						<input type="hidden" name="settings" value="monitoring_settings">
-						<p style="font-family:'Orator Std'; color: #dcdcdc; font-size: 12pt; text-align: left;">current color:<input id="color" placeholder="Select color" value=""></p>
+						<p style="font-family:'Orator Std'; color: #dcdcdc; font-size: 10pt; text-align: left;">current color:<label id="curcolor" value=""></p>
 							<div class="color-wrap">
 								<div id="ad3d-colorwheeldisplay" style="background-color: rgb(220, 220, 220);">
 								</div>
@@ -79,8 +79,16 @@
                             self.selectedInput.style.color = "#FFF";
                         else
                             self.selectedInput.style.color = "#000";
-							
-						// document.getElementById('ad3d-colorwheeldisplay') = self.getCurColorHex();
+                        
+                        var curDiv = document.getElementById('curcolor');
+                            curDiv.innerText = self.getCurColorHex();
+                            // curDiv.classList.add('assigned');
+                            // curDiv.style.color = self.getCurColorHex();
+                            
+                        var curDiv = document.getElementById('ad3d-colorwheeldisplay');
+                            // curDiv.innerText = self.getCurColorHex();
+                            // curDiv.classList.add('assigned');
+                            curDiv.style.background = self.getCurColorHex();
 
                         self.selectedInput.value = self.getCurColorHex();    
                         self.selectedInput.style.background = self.selectedInput.value;   
@@ -156,7 +164,7 @@
 	
 	<article class="settingscolom">
 		<h4>Wi-Fi 
-			<button id="wifi_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('wifi_settings',this)" title="Show/Hide Settings">+</button></h4>
+			<button id="wifi_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('wifi_settings',this)" title="Show/Hide Wi-Fi Settings">+</button></h4>
 				<div class="settings">
 					<label id="wifiResponseText"></label>
 						<form id="wifi_settings" style="display:none" method="POST">
@@ -183,7 +191,7 @@
 				</div>
 		<hr>				
 		<h4>MQTT 
-			<button id="mqtt_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('mqtt_settings',this)" title="Show/Hide Settings">+</button></h4>
+			<button id="mqtt_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('mqtt_settings',this)" title="Show/Hide MQTT Settings">+</button></h4>
 				<div class="settings">
 					<label id="mqttResponseText"></label>
 						<form id="mqtt_settings" style="display:none" method="POST">
@@ -223,8 +231,8 @@
 						</form>
 				</div>
 	<hr>
-		<h4>Network Time Server 
-			<button id="ntp_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('ntp_settings',this)" title="Show/Hide Settings">+</button></h4>
+		<h4>NTS 
+			<button id="ntp_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('ntp_settings',this)" title="Show/Hide Network Time Server Settings">+</button></h4>
 				<div class="settings">
 					<label id="ntpResponseText"></label>
 						<form id="ntp_settings" style="display:none" method="POST">

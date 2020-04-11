@@ -1,15 +1,15 @@
 /*----------------------------------------------------------*/
 
 .inputs-list {
-	margin: 10px;
+	margin: 30px 10px 10px 10px;
 	float: right;
 	width: 45%;
 	}
 
 .color-canvas {
-	margin: 10px;
+	margin: 30px;
 	float: left;
-	width: 45%;
+	width: 40%;
 	}
 
 
@@ -20,7 +20,6 @@
 }
 
 .multi-input.selected {
-    
     border: 2px solid #000;
 }
 
@@ -35,6 +34,10 @@
   content: 'Select a Color';
   color: #ffffff;
   text-shadow: 0 0 4px #333333;
+}
+
+#ad3d-colorwheeldisplay.assigned::before{
+  content: '';
 }
 
 /*----------------------------------------------------------*/

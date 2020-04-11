@@ -53,6 +53,7 @@
   margin: 4px;
   border-radius: var(--radius);
   float: right;
+  cursor: pointer;
   /*background-color: #282828;
   background-image: linear-gradient(#686868, #686868),
     linear-gradient(-135deg, transparent 50%, #686868 50%),
