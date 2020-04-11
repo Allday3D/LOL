@@ -1,7 +1,8 @@
 # LOL
-responsive webserver for RGB LEDs.
+responsive (not really yet!) webserver for RGB LEDs.
 Just simple RGB LED's.
+Many thanks to NC22 for this fantastic color picker:https://github.com/NC22/HTML5-Color-Picker
 
-![Diagram](https://github.com/Allday3D/LOL/blob/master/test_layout.jpg)
+![Diagram](https://github.com/Allday3D/LOL/blob/master/vision-1.jpg)
 
 It's work in progress.
