@@ -8,6 +8,9 @@ Many thanks to NC22 for this fantastic color picker:https://github.com/NC22/HTML
 
 It's work in progress.
 
+Test: https://allday-3d.com//test_case/data/index.html
+
+
 ## TO DO
 
 - Place the canvas (with the color picker) centered when width is less then.. 400px (for example)
