@@ -7,9 +7,6 @@ Many thanks to NC22 for this fantastic color picker:https://github.com/NC22/HTML
 ![Diagram](https://github.com/Allday3D/LOL/blob/master/vision-1.jpg)
 
 It's work in progress.
-### Example.
-
-<a href="//Allday3D.github.io/LOL/data/index.html">An example</a>
 
 ## TO DO
 
