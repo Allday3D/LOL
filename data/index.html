@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US"><head><!-- Created by AD3D -->
 	<meta charset="utf-8">
-	<title>LOL-01</title>
+	<title>LOL</title>
 	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 	<link rel="apple-touch-icon" sizes="144x144" href="/favicon_144x144.png">
     <link rel="icon" type="image/png" sizes="144x144"  href="/favicon_144x144.png">
@@ -9,12 +9,12 @@
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	
 	<link rel="stylesheet" href="style_lolmain.css">
-	<link rel="stylesheet" href="style_grid.css">
-	<link rel="stylesheet" href="style.responsive.css">
+	<link rel="stylesheet" href="style_ad3d_grid.css">
 	<link rel="stylesheet" href="style_ad3d_text.css">
 	<link rel="stylesheet" href="style_ad3d_select.css">
 	<link rel="stylesheet" href="style_ad3d_input.css">
 	<link rel="stylesheet" href="style_ad3d_button.css">
+	<link rel="stylesheet" href="style_ad3d_switch.css">
 	<link rel="stylesheet" href="style_rgbwheel.css">
 	
 	<script src="jquery.min.js"></script>
@@ -27,7 +27,8 @@
 
 <div class="wrapper">
 	<header class="header">
-		<h1><a href="https://github.com/Allday3D" target="_blank"><img src="favicon_144x144.png"></a>LOL-01</h1>
+		<h1><a href="https://github.com/Allday3D" target="_blank"><img src="favicon_144x144.png"></a>LOL
+		<label class="ad3d-switch" style="float: right; margin: 15px 20px 10px 10px;"><input type="checkbox"><span class="ad3d-slider round"></span></label></h1>
 			<div id="txt1" style="font-family:'Orator Std'; color: #dcdcdc; font-size: 12pt; text-align: left; font-weight: bold; margin-left: 86px"></div>
 	</header>
 
@@ -40,19 +41,20 @@
 	</article>
 -->
 	<article class="colwheelcolom">
-		<h4>Color wheel 
+	<!-- <div id="monitoring_settings" class="settings"> -->
+				<label id="monitoringResponseText">current color:</label><label id="curcolor" value=""></label>
+		<!-- <h4>Color wheel 
 			<button id="monitoring_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('monitoringForm',this)" title="Show/Hide Settings">-</button></h1>
-				<div id="monitoring_settings" class="settings">
+				
 					<form id="monitoringForm" method="POST">
-						<input type="hidden" name="settings" value="monitoring_settings">
-						<p style="font-family:'Orator Std'; color: #dcdcdc; font-size: 10pt; text-align: left;">current color:<label id="curcolor" value=""></p>
+						<input type="hidden" name="settings" value="monitoring_settings"> -->
+				
 							<div class="color-wrap">
-								<div id="ad3d-colorwheeldisplay" style="background-color: rgb(220, 220, 220);">
-								</div>
+								<div id="ad3d-colorwheeldisplay" style="background-color: rgb(220, 220, 220); height:30px;"></div>
 							</div>
 
 							<div class="color-canvas">
-							<canvas id="canvas"></canvas>
+								<canvas id="canvas"></canvas>
 							</div>
 							
 							<div class="inputs-list">
@@ -63,11 +65,12 @@
 								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#0000ff" style="background-color:#0000ff;">
 								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#00ffff" style="background-color:#00ffff;">
 							</div>
+							
 					<script>
 						var picker = new KellyColorPicker({ 
 							place : 'canvas',
 							method : 'triangle',
-							size : '240',			
+							size : '280',			
 							userEvents : { 
                 
 								change : function(self) {
@@ -82,14 +85,18 @@
                         
                         var curDiv = document.getElementById('curcolor');
                             curDiv.innerText = self.getCurColorHex();
-                            // curDiv.classList.add('assigned');
-                            // curDiv.style.color = self.getCurColorHex();
+                            curDiv.classList.add('assigned');
+                            curDiv.style.color = self.getCurColorHex();
                             
                         var curDiv = document.getElementById('ad3d-colorwheeldisplay');
                             // curDiv.innerText = self.getCurColorHex();
                             // curDiv.classList.add('assigned');
                             curDiv.style.background = self.getCurColorHex();
 
+						var curdiv = document.getElementById('monitoringResponseText');
+							curDiv.classList.add('assigned');
+							curDiv.style.background = self.getCurColorHex();
+						
                         self.selectedInput.value = self.getCurColorHex();    
                         self.selectedInput.style.background = self.selectedInput.value;   
                         
@@ -121,8 +128,8 @@
 
             </script>
 					
-					</form>
-				</div>
+					<!-- </form> 
+				</div>-->
 	</article>
 
 
@@ -166,17 +173,17 @@
 		<h4>Wi-Fi 
 			<button id="wifi_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('wifi_settings',this)" title="Show/Hide Wi-Fi Settings">+</button></h4>
 				<div class="settings">
-					<label id="wifiResponseText"></label>
+					<label id="wifiResponseText">current connection:</label>
 						<form id="wifi_settings" style="display:none" method="POST">
 							<input type="hidden" name="settings" value="wifi_settings">
 								<table width="100%">
 									<tr>
 										<td class="titlewidth">Network (SSID)</td>
-										<td><input type="text" class="ad3d-input" id="fssid" name="ssid" maxlength="50"></td>
+										<td><input type="text" class="ad3d-input" placeholder="SSID name" id="fssid" name="ssid" maxlength="50"></td>
 									</tr>
 									<tr>
 										<td>Network Password</td>
-										<td id="fpassstr"><input type="password" class="ad3d-input" id="fpass" name="pass" maxlength="50"></td>
+										<td id="fpassstr"><input type="password" class="ad3d-input" placeholder="Password" id="fpass" name="pass" maxlength="50"></td>
 									</tr>
 									<tr>
 										<td class="checkboxrow">Unprotected</td>
@@ -193,7 +200,7 @@
 		<h4>MQTT 
 			<button id="mqtt_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('mqtt_settings',this)" title="Show/Hide MQTT Settings">+</button></h4>
 				<div class="settings">
-					<label id="mqttResponseText"></label>
+					<label id="mqttResponseText">current connection:</label>
 						<form id="mqtt_settings" style="display:none" method="POST">
 							<input type="hidden" name="settings" value="mqtt_settings">
 								<table width="100%">
@@ -234,7 +241,7 @@
 		<h4>NTS 
 			<button id="ntp_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('ntp_settings',this)" title="Show/Hide Network Time Server Settings">+</button></h4>
 				<div class="settings">
-					<label id="ntpResponseText"></label>
+					<label id="ntpResponseText">current connection:</label>
 						<form id="ntp_settings" style="display:none" method="POST">
 							<input type="hidden" name="settings" value="ntp_settings">
 								<table width="100%">

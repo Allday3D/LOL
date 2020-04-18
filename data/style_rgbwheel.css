@@ -1,43 +1,75 @@
 /*----------------------------------------------------------*/
 
 .inputs-list {
-	margin: 30px 10px 10px 10px;
+	margin: 50px 10px 10px 10px;
 	float: right;
-	width: 45%;
+	width: 40%;
 	}
 
 .color-canvas {
-	margin: 30px;
+	margin-top: 30px;
+	margin-left: 40px;
 	float: left;
 	width: 40%;
 	}
 
-
-.multi-input {
-    border: 2px solid rgba(70, 70, 70, 0.18);
-    box-sizing: border-box;
-    text-align : right;
-}
-
-.multi-input.selected {
-    border: 2px solid #000;
-}
-
 /*----------------------------------------------------------*/
 
 #ad3d-colorwheeldisplay{
-  padding: 10px 10px 10px 40px;
-  border-radius: 2px;
+	margin: 10px 15px 1px 1px;
+	padding: 10px 10px 10px 10px;
+	border-radius: 6px;
 }
 
 #ad3d-colorwheeldisplay::before{
-  content: 'Select a Color';
-  color: #ffffff;
-  text-shadow: 0 0 4px #333333;
+	content: '';
+	color: #ffffff;
+	text-shadow: 0 0 4px #333333;
 }
 
 #ad3d-colorwheeldisplay.assigned::before{
-  content: '';
+	content: '';
 }
 
 /*----------------------------------------------------------*/
+
+
+@media only screen and (max-width: 768px) {
+	.inputs-list {
+	margin: 10px 10px 10px 10px;
+	padding-left: 30px; 
+	float: right;
+	width: 100%;
+	}
+
+.color-canvas {
+	float: none;
+	position: relative;
+	padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+	width: 280;
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	.inputs-list {
+	margin: 30px 10px 10px 30px;
+	padding-left: 30px; 
+	float: right;
+	width: 100%;
+	}
+	
+	.color-canvas {
+	float: none;
+	min-width: 280;
+	padding-left: 0;
+    padding-right: 0;
+    margin-left: 30px;
+    margin-right: auto;
+    display: block;
+	}
+}
