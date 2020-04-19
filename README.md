@@ -1,6 +1,6 @@
 # LOL
 responsive (think I got it - 4/2020) webserver for RGB LEDs.
-Just simple control of RGB LED's. (no fancy chip in LED)
+Simple control of RGB LED's. (no fancy chip in LED)
 
 Many thanks to NC22 for this fantastic color picker:https://github.com/NC22/HTML5-Color-Picker
 
