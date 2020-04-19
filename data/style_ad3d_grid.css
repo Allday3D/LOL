@@ -12,262 +12,9 @@
   grid-gap: 10px;
 }
 
-@media screen and (max-width: 600px) {
-	
-	.wrapper {
-    margin: 0 auto;
-	align-content: center;
-	grid-template-rows: 100px auto auto auto auto auto;
-    grid-template-columns: 100%;
-	grid-template-areas:
-	"header"
-	"colwheelcolom"
-	"settingscolom"
-	"footer";
-  }
-  
-  /* no grid support? */
-    .stateinfocolom {
-    float: left;
-	grid-area: stateinfocolom;
-	grid-column: 1 / -1;
-  }
-  
-    .settingscolom {
-    float: left;
-	grid-area: settingscolom;
-	grid-column: 1 / -1;
-  }
 
-    .colwheelcolom {
-    float: right;
-	grid-area: colwheelcolom;
-	grid-column: 1 / -1;
-  }
-  
-    .colslidecolom {
-    float: left;
-	grid-area: colslidecolom;
-	grid-column: 1 / -1;
-  }
-   
-  .tempgaugecolom {
-  float: left;
-  grid-area: tempgaugecolom;
-   /*   width: 19.1489%; */
-  }
 
-  .humgaugecolom {
-    float: left;
-	grid-area: humgaugecolom;
-    /* width: 19.1489%; */
-  }
-
-  .presgaugecolom {
-    float: left;
-	grid-area: presgaugecolom;
-    /* width: 19.1489%; */
-  }
-  
-    .luxgaugecolom {
-    float: left;
-	grid-area: luxgaugecolom;
-    /* width: 19.1489%; */
-  }
-
-    .infocol5 {
-    float: left;
-	grid-area: infocol5;
-	grid-column: 1 / -1;
-  }
-  
-	.header {
-    grid-column: 1 / -1;
-	grid-area: header;
-    /* needed for the floated layout */
-    clear: both;
-  }
-
-  
-  .footer {
-    grid-column: 1 / -1;
-	grid-area: footer;
-    /* needed for the floated layout */
-    clear: both;
-  }	
-}
-
-@media screen and (min-width: 600px) {
-	
-	.wrapper {
-    margin: 0 auto;
-	align-content: center;
-	grid-template-rows: 100px auto auto auto auto auto;
-    grid-template-columns: 50% 50%;
-	grid-template-areas:
-	"header header"
-	"colwheelcolom colwheelcolom"
-	"settingscolom settingscolom"
-	"footer footer";
-  }
-  
-  /* no grid support? */
-    .stateinfocolom {
-    float: left;
-	grid-area: stateinfocolom;
-	grid-column: 1 / -1;
-  }
-  
-    .settingscolom {
-    float: left;
-	grid-area: settingscolom;
-	grid-column: 1 / -1;
-  }
-
-    .colwheelcolom {
-    float: right;
-	grid-area: colwheelcolom;
-	grid-column: 1 / -1;
-  }
-  
-    .colslidecolom {
-    float: left;
-	grid-area: colslidecolom;
-	grid-column: 1 / -1;
-  }
-   
-  .tempgaugecolom {
-  float: left;
-  grid-area: tempgaugecolom;
-   /*   width: 19.1489%; */
-  }
-
-  .humgaugecolom {
-    float: left;
-	grid-area: humgaugecolom;
-    /* width: 19.1489%; */
-  }
-
-  .presgaugecolom {
-    float: left;
-	grid-area: presgaugecolom;
-    /* width: 19.1489%; */
-  }
-  
-    .luxgaugecolom {
-    float: left;
-	grid-area: luxgaugecolom;
-    /* width: 19.1489%; */
-  }
-
-    .infocol5 {
-    float: left;
-	grid-area: infocol5;
-	grid-column: 1 / -1;
-  }
-  
-	.header {
-    grid-column: 1 / -1;
-	grid-area: header;
-    /* needed for the floated layout */
-    clear: both;
-  }
-
-  
-  .footer {
-    grid-column: 1 / -1;
-	grid-area: footer;
-    /* needed for the floated layout */
-    clear: both;
-  }	
-}
-
-@media screen and (max-width: 800px) {
-	
-	.wrapper {
-    margin: 0 auto;
-	align-content: center;
-	grid-template-rows: 100px auto auto auto auto auto;
-    grid-template-columns: 100%;
-	grid-template-areas:
-	"header"
-	"colwheelcolom"
-	"settingscolom"
-	"footer";
-  }
-  
-  /* no grid support? */
-    .stateinfocolom {
-    float: left;
-	grid-area: stateinfocolom;
-	grid-column: 1 / -1;
-  }
-  
-    .settingscolom {
-    float: left;
-	grid-area: settingscolom;
-	grid-column: 1 / -1;
-  }
-
-    .colwheelcolom {
-    float: right;
-	grid-area: colwheelcolom;
-	grid-column: 1 / -1;
-  }
-  
-    .colslidecolom {
-    float: left;
-	grid-area: colslidecolom;
-	grid-column: 1 / -1;
-  }
-   
-  .tempgaugecolom {
-  float: left;
-  grid-area: tempgaugecolom;
-   /*   width: 19.1489%; */
-  }
-
-  .humgaugecolom {
-    float: left;
-	grid-area: humgaugecolom;
-    /* width: 19.1489%; */
-  }
-
-  .presgaugecolom {
-    float: left;
-	grid-area: presgaugecolom;
-    /* width: 19.1489%; */
-  }
-  
-    .luxgaugecolom {
-    float: left;
-	grid-area: luxgaugecolom;
-    /* width: 19.1489%; */
-  }
-
-    .infocol5 {
-    float: left;
-	grid-area: infocol5;
-	grid-column: 1 / -1;
-  }
-  
-	.header {
-    grid-column: 1 / -1;
-	grid-area: header;
-    /* needed for the floated layout */
-    clear: both;
-  }
-
-  
-  .footer {
-    grid-column: 1 / -1;
-	grid-area: footer;
-    /* needed for the floated layout */
-    clear: both;
-  }	
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
 
   .wrapper {
     margin: 0 auto;
@@ -276,7 +23,8 @@
     grid-template-columns: 25% 25% 25% 25%;
 	grid-template-areas:
 	"header header header header"
-	"colwheelcolom colwheelcolom colwheelcolom colwheelcolom"
+	"stateinfocolom stateinfocolom stateinfocolom stateinfocolom"
+	"colwheelcolom colwheelcolom colslidecolom colslidecolom"
 	"settingscolom settingscolom settingscolom settingscolom"
 	"footer footer footer footer";
   }
@@ -295,45 +43,15 @@
   }
 
     .colwheelcolom {
-    float: right;
+    float: left;
 	grid-area: colwheelcolom;
-	grid-column: 1 / -1;
+	/* grid-column: 1 / -1; */
   }
   
     .colslidecolom {
     float: left;
 	grid-area: colslidecolom;
-	grid-column: 1 / -1;
-  }
-   
-  .tempgaugecolom {
-  float: left;
-  grid-area: tempgaugecolom;
-   /*   width: 19.1489%; */
-  }
-
-  .humgaugecolom {
-    float: left;
-	grid-area: humgaugecolom;
-    /* width: 19.1489%; */
-  }
-
-  .presgaugecolom {
-    float: left;
-	grid-area: presgaugecolom;
-    /* width: 19.1489%; */
-  }
-  
-    .luxgaugecolom {
-    float: left;
-	grid-area: luxgaugecolom;
-    /* width: 19.1489%; */
-  }
-
-    .infocol5 {
-    float: left;
-	grid-area: infocol5;
-	grid-column: 1 / -1;
+	/* grid-column: 1 / -1; */
   }
   
 	.header {
@@ -342,7 +60,6 @@
     /* needed for the floated layout */
     clear: both;
   }
-
   
   .footer {
     grid-column: 1 / -1;
@@ -350,7 +67,6 @@
     /* needed for the floated layout */
     clear: both;
   }
-
 }
 
 .wrapper > * {
@@ -373,8 +89,6 @@
     margin: 0;
   }
 }
-
-
 
 header h1 {
 	text-indent: 10px;

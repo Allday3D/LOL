@@ -1,22 +1,25 @@
 /*----------------------------------------------------------*/
 
 .inputs-list {
-	margin: 50px 10px 10px 10px;
-	float: right;
-	width: 40%;
+	margin-top: 15px;
+	margin-left: auto;
+    margin-right: auto;
+	float: none;
+	width: 90%;
 	}
 
 .color-canvas {
-	margin-top: 30px;
-	margin-left: 40px;
-	float: left;
-	width: 40%;
+	margin-left: auto;
+    margin-right: auto;
+	float: none;
+	width: 90%;
+	min-width: 280px;
 	}
 
 /*----------------------------------------------------------*/
 
 #ad3d-colorwheeldisplay{
-	margin: 10px 15px 1px 1px;
+	margin: 10px 15px 10px 1px;
 	padding: 10px 10px 10px 10px;
 	border-radius: 6px;
 }
@@ -31,7 +34,7 @@
 	content: '';
 }
 
-/*----------------------------------------------------------*/
+/*----------------------------------------------------------
 
 
 @media only screen and (max-width: 768px) {
@@ -72,4 +75,4 @@
     margin-right: auto;
     display: block;
 	}
-}
+}*/
