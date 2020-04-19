@@ -4,7 +4,7 @@ Simple control of RGB LED's. (no fancy chip in LED)
 
 Many thanks to NC22 for this fantastic color picker:https://github.com/NC22/HTML5-Color-Picker
 
-![Diagram](https://github.com/Allday3D/LOL/blob/master/real_view.jpg)
+![Diagram](https://github.com/Allday3D/LOL/blob/master/less_600px.jpg)
 
 It's work in progress.
 
