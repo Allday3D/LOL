@@ -1,12 +1,27 @@
+.ad3d-curlabel {
+  text-align: left;
+  text-transform: uppercase;
+  color: #282828;
+  display: block;
+  font-size: 0.67em;
+  margin-top: 0.12em;
+  margin-bottom: 0.06em;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+}
+
 /*----------------------------------------------------------*/
  
 h1 {
+	text-indent: 10px;
   text-align: left;
   text-transform: uppercase;
-  color: #ffffff;
+  color: #000000;
   display: block;
   font-size: 2em;
-  margin-top: 0.12em;
+  padding: 0px;
+  margin-top: -0.5em;
   margin-bottom: 0.12em;
   margin-left: 0;
   margin-right: 0;
@@ -46,7 +61,7 @@ h4 {
   display: block;
   font-size: 0.88em;
   margin-top: 0.88em;
-  margin-bottom: 0.88em;
+  margin-bottom: 0.3em;
   margin-left: 0;
   margin-right: 0;
   font-weight: bold;
@@ -74,4 +89,8 @@ p {
 a {
   text-decoration: none;
   color: #dcdcdc;
+}
+
+h1, p {
+  margin: 0 0 1em 0;
 }

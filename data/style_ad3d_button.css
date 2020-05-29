@@ -20,13 +20,13 @@ button.ad3d-button
    vertical-align: middle;
    white-space: nowrap;
    text-align: center;
-   background-color: #686868;
-   -webkit-border-radius:6px;
-   -moz-border-radius:6px;
-   border-radius:6px;
+   background-color: var(--topBg);
+   -webkit-border-radius:var(--radius);
+   -moz-border-radius:var(--radius);
+   border-radius:var(--radius);
    border:0px dotted transparent;
-   color: #282828;
-   margin: 0 1px 0 0 !important;
+   color: var(--baseBg);
+   margin: 0 1px 10px 0 !important;
    overflow: visible;
    cursor: pointer;
    text-indent: 0;
@@ -68,37 +68,42 @@ input.ad3d-button
 
 .ad3d-button.active, .ad3d-button.active:hover
 {
-   background: #345056;
-   -webkit-border-radius:6px;
-   -moz-border-radius:6px;
-   border-radius:6px;
+   background: var(--baseBg);
+   -webkit-border-radius:var(--radius);
+   -moz-border-radius:var(--radius);
+   border-radius:var(--radius);
    border:0px dotted transparent;
    padding:0 5px;
    margin:0 auto;
 }
+
 .ad3d-button.active, .ad3d-button.active:hover {
-   color: #282828 !important;
+   color: var(--baseBg) !important;
 }
 
 .ad3d-button.hover, .ad3d-button:hover
 {
-   background: red;
-   -webkit-border-radius:6px;
-   -moz-border-radius:6px;
-   border-radius:6px;
+   background: var(--accentBg);
+   -webkit-border-radius:var(--radius);
+   -moz-border-radius:var(--radius);
+   border-radius:var(--radius);
    border:0px dotted transparent;
    padding:0 5px;
    margin:0 auto;
 }
 .ad3d-button.hover, .ad3d-button:hover {
-   color: grey !important;
+   color: var(--articleBg) !important;
 }
 
+.ad3d-button:focus {
+	outline:none;
+}
 
-.ad3d-hideShowButton {
+.ad3d-hideshowbutton {
     color: #ffff83;
 	background-color: #272e30;
     padding: 5px 6px 5px 6px;
+	margin-right: 14px;
     border-radius: 4px;
     border: 2px solid #999999;
     cursor: pointer;
@@ -106,7 +111,66 @@ input.ad3d-button
     font-weight: bold;
 	font-size: 52%;
 	position: relative;
+	max-width: 24px;
+	min-width: 24px;
     /* Adjust these values accordingly*/
     top: -3px;
     left: 5px;
+}
+
+.ad3d-colorPreset {
+	margin-right: 10px;
+	margin-bottom: 10px;
+    border-radius: 6px;
+    border: 2px solid #999999;
+    cursor: pointer;
+    box-shadow: none;
+    font-weight: bold;
+	font-size: 70%;
+	position: relative;
+	width:100%;
+	height: 38px;
+	max-width: 200px;
+	min-width: 60px;
+    /* Adjust these values accordingly*/
+    top: -3px;
+    left: 0px;
+}
+
+.ad3d-colorPreset.selected {
+	margin-right: 10px;
+	margin-bottom: 10px;
+    border-radius: 6px;
+    border: 4px solid #111111;
+    cursor: pointer;
+    box-shadow: none;
+    font-weight: bold;
+	font-size: 70%;
+	position: relative;
+	width:100%;
+	height: 38px;
+	max-width: 200px;
+	min-width: 60px;
+    /* Adjust these values accordingly*/
+    top: -3px;
+    left: 0px;
+}
+
+.ad3d-colorPreset:active {
+	margin-right: 10px;
+	margin-bottom: 10px;
+    border-radius: 6px;
+    border: 4px solid #111111;
+    cursor: pointer;
+    box-shadow: none;
+    font-weight: bold;
+	font-size: 70%;
+	position: relative;
+	width:100%;
+	height: 38px;
+	max-width: 200px;
+	min-width: 60px;
+    /* Adjust these values accordingly*/
+    top: -3px;
+    left: 0px;
 }

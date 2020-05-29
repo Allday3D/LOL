@@ -112,8 +112,10 @@ function startTime() {
 	h = checkTime(h);
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('txt1').innerHTML =
-    y + "/" + mth + "/" + day +"  " + h + ":" + m + ":" + s;
+    document.getElementById('txtTime').innerHTML =
+    h + ":" + m + ":" + s;
+	document.getElementById('txtDate').innerHTML =
+    y + "/" + mth + "/" + day;
     var t = setTimeout(startTime, 500);
 }
 

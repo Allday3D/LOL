@@ -2,91 +2,155 @@
 <html dir="ltr" lang="en-US"><head><!-- Created by AD3D -->
 	<meta charset="utf-8">
 	<title>LOL</title>
-	<!-- <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> -->
-	
 	<meta name="viewport" content="initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+	
 	<link rel="apple-touch-icon" sizes="144x144" href="/favicon_144x144.png">
     <link rel="icon" type="image/png" sizes="144x144"  href="/favicon_144x144.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/favicon.ico">
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	
 	<link rel="stylesheet" href="style_lolmain.css">
+	
 	<link rel="stylesheet" href="style_ad3d_grid.css">
 	<link rel="stylesheet" href="style_ad3d_text.css">
 	<link rel="stylesheet" href="style_ad3d_select.css">
 	<link rel="stylesheet" href="style_ad3d_input.css">
 	<link rel="stylesheet" href="style_ad3d_button.css">
-	<link rel="stylesheet" href="style_ad3d_switch.css">
+	<link rel="stylesheet" href="style_ad3d_squareswitch.css">
+	<link rel="stylesheet" href="style_ad3d_icoon.css">
+	<link rel="stylesheet" href="style_ad3d_label.css">
 	<link rel="stylesheet" href="style_rgbwheel.css">
-	
-	<script src="jquery.min.js"></script>
+	<link rel="stylesheet" href="style_rgbsliders.css">
+	<link rel="stylesheet" href="style_ad3d_theme.css">
+	<link rel="stylesheet" href="style_ad3d_upload.css">
 	
 	<script src="script_mes.js"></script>
 	<script src="html5kellycolorpicker.min.js"></script>
-
 </head>
-<body onload="startTime(), beginPage()">
+<!--  -->
 
-<div class="wrapper">
+<body class="theme-basic" onload="startTime(), beginPage()">
+
+<div class="ad3d-wrapper">
 	<header class="header">
-		<h1><a href="https://github.com/Allday3D" target="_blank"><img src="favicon_144x144.png"></a>LOL
-			<label class="ad3d-switch" style="float: right; margin: 15px 20px 10px 10px;"><input type="checkbox"><span class="ad3d-slider round"></span></label></h1>
-			<div id="txt1" style="font-family:'Orator Std'; color: #dcdcdc; font-size: 12pt; text-align: left; font-weight: bold; margin-left: 86px"></div>
+		<a href="https://github.com/Allday3D" target="_blank"><img src="favicon_144x144.png" id="logoState"></a>
+			<label class="ad3d-squareswitch" style="float: right; margin: 0px 10px 10px 10px;"><input type="checkbox"><span class="ad3d-slider round"></span></label>
+			<label class="ad3d-devicelabel" title="LED light" id="txtDevice">LOL-01</label>
+			<label class="ad3d-datelabel" title="Current browser date" id="txtDate"></label>
+			<label class="ad3d-timelabel" title="Current browser time" id="txtTime"></label>
 	</header>
 
 	
-	<article class="stateinfocolom">
-		
-			current color:<label id="curcolor" value=""></label>
-				<div class="color-wrap"><div id="ad3d-colorwheeldisplay" style="background-color: rgb(220, 220, 220); height:30px;"></div></div>
-		
+	<article class="ad3d-stateinfocolom">
+		<label class="ad3d-curlabel">current color :<label id="curcolor" value="">#282828</label></label>
+			<div class="color-wrap">
+				<div id="ad3d-colordisplay" style="background-color: rgb(255, 255, 131);"></div>
+			</div>
 	</article>
 
-	<article class="colwheelcolom">
-				<div class="color-canvas"><canvas id="canvas"></canvas></div>
+	<article class="ad3d-colwheelcolom">
+		<canvas id="canvas" class="ad3d-colorcanvas"></canvas>
+			
 	</article>
 
-
-	<article class="colslidecolom">
-		<div class="inputs-list">
-								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#ff0000" style="background-color:#ff0000;">
-								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#ff00ff" style="background-color:#ff00ff;">
-								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#00ff00" style="background-color:#00ff00;">
-								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#ffff00" style="background-color:#ffff00;">
-								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#0000ff" style="background-color:#0000ff;">
-								<input class="ad3d-color" onclick="picker.editInput(event.target)" onchange="picker.editInput(event.target)"  class="multi-input input-quad" value="#00ffff" style="background-color:#00ffff;">
-							</div>
-							
-					<script>
-						var picker = new KellyColorPicker({ 
+	<article class="ad3d-colslidecolom">
+		
+			<div class="ad3d-sliders">
+					<div>
+						<label for="red" class="ad3d-colorlabel" style="background: rgb(255, 0, 0) none repeat scroll 0% 0%;">Red</label>
+						<input type="number" id="redNum" value="200">
+						<input value="255" type="range" min="0" max="255" id="red" onchange="sendRGB();" style="background: rgb(200, 0, 0) none repeat scroll 0% 0%;">
+					</div>
+					<div>
+						<label for="green" class="ad3d-colorlabel" style="background: rgb(0, 255, 0) none repeat scroll 0% 0%;">Green</label>
+						<input type="number" id="greenNum" value="130">
+						<input value="255" type="range" min="0" max="255" id="green" onchange="sendRGB();" style="background: rgb(0, 130, 0) none repeat scroll 0% 0%;">
+					</div>
+					<div>
+						<label for="blue" class="ad3d-colorlabel" style="background: rgb(0, 0, 131) none repeat scroll 0% 0%;">Blue</label>
+						<input type="number" id="blueNum" value="180">
+						<input value="131" type="range" min="0" max="255" id="blue" onchange="sendRGB();" style="background: rgb(0, 0, 180) none repeat scroll 0% 0%;">
+					</div>
+					<div>
+                        <label for="bright" class="ad3d-colorlabel" style="padding: 4px 7px 1px 7px"><i aria-hidden="false" class="material-icons md-light">wb_incandescent</i></label>
+                        <input type="number" id="brightNum" style="margin: -12px 5px 1px 5px">
+                        <input value="255" type="range" min="0" max="255" id="bright">
+					</div>
+			</div>
+		
+		<!--  -->
+		<script>
+			function sendRGB(){
+				var r = parseInt(document.getElementById('redNum').value).toString(16);
+				var g = parseInt(document.getElementById('greenNum').value).toString(16);
+				var b = parseInt(document.getElementById('blueNum').value).toString(16);
+    
+				if(r.length < 2){
+					r = '0' + r;
+				}   
+    
+				if(g.length < 2){
+					g = '0' + g;
+				}   
+    
+				if(b.length < 2){
+					b = '0' + b;
+				}   
+    
+			var rgb = '#'+r+g+b;    
+			console.log('RGB: ' + rgb); 
+			
+			
+			var curDiv = document.getElementById('curcolor');
+                            curDiv.innerText = (rgb);
+			connection.send(rgb);
+			};
+		</script>
+	</article>
+	
+	<article class="ad3d-coleditcolom">
+	<div class="ad3d-colbutton">
+		
+            <button class="ad3d-colorPreset" style="background: #ff0000">#ff0000</button>
+            <button class="ad3d-colorPreset" style="background: #ff00ff">#ff00ff</button>
+            <button class="ad3d-colorPreset" style="background: #00ff00">#00ff00</button>
+            <button class="ad3d-colorPreset" style="background: #ffff00">#ffff00</button>
+            <button class="ad3d-colorPreset" style="background: #0000ff">#0000ff</button>
+            <button class="ad3d-colorPreset" style="background: #00ffff">#00ffff</button>
+        
+	</div>
+	</article>
+	
+	
+	<script>
+                var picker = new KellyColorPicker({ 
 							place : 'canvas',
 							method : 'triangle',
-							size : '280',			
+							size : '250',			
 							userEvents : { 
                 
 								change : function(self) {
                     
                         // work with your own variables that describe current selected input
-                        
+                        if (!self.selectedInput) self.selectedInput = document.getElementById('ad3d-colordisplay');
                         if (!self.selectedInput) return;
                         if (self.getCurColorHsv().v < 0.5)
-                            self.selectedInput.style.color = "#FFF";
+                           self.selectedInput.style.color = "#FFF";
                         else
                             self.selectedInput.style.color = "#000";
                         
                         var curDiv = document.getElementById('curcolor');
                             curDiv.innerText = self.getCurColorHex();
-                            curDiv.classList.add('assigned');
-                            // curDiv.style.color = self.getCurColorHex();
+                        //    curDiv.classList.add('assigned');
+                        //    curDiv.style.color = self.getCurColorHex();
                             
-                        var curDiv = document.getElementById('ad3d-colorwheeldisplay');
+                        var curDiv = document.getElementById('ad3d-colordisplay');
                             // curDiv.innerText = self.getCurColorHex();
                             // curDiv.classList.add('assigned');
                             curDiv.style.background = self.getCurColorHex();
 
-						var curdiv = document.getElementById('monitoringResponseText');
-							curDiv.classList.add('assigned');
-							curDiv.style.background = self.getCurColorHex();
+						// var curdiv = document.getElementById('monitoringResponseText');
+							// curDiv.classList.add('assigned');
+							// curDiv.style.background = self.getCurColorHex();
 						
                         self.selectedInput.value = self.getCurColorHex();    
                         self.selectedInput.style.background = self.selectedInput.value;   
@@ -98,35 +162,34 @@
 
             // addition user methods \ variables 
 
-            picker.editInput = function(target) {
-
-                if (picker.selectedInput) picker.selectedInput.classList.remove('selected');   
-                if (target) picker.selectedInput = target;
-                if (!picker.selectedInput) return false;
-                
-                picker.selectedInput.classList.add('selected');    
-                picker.setColor(picker.selectedInput.value);
+            
+			// preseted colors
+            
+            var colorPreset = document.getElementsByClassName('ad3d-colorPreset');
+            
+            for (var i = 0; i < colorPreset.length; i++) {
+                colorPreset[i].onclick = function() {
+                    picker.setColor(this.innerHTML);
+                }
             }
-
+			
             // initialize 
 
             var mInputs = document.getElementsByClassName('multi-input');
             for (var i = 0; i < mInputs.length; i++) {
                 picker.editInput(mInputs[i]);
             }
-
-			
-
+                
             </script>
-    
-	</article>
-	
-	
-	<article class="settingscolom">
-		<h4>Wi-Fi 
-			<button id="wifi_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('wifi_settings',this)" title="Show/Hide Wi-Fi Settings">+</button></h4>
-				<div class="settings">
-					<label id="wifiResponseText">current connection:</label>
+	<!---->
+<!----------------------------------------------------------------------------------------------------------------------------->
+
+	<article class="ad3d-settingscolom" class="theme-basic">
+		<h4>
+			<button id="wifi_settings_button" class="ad3d-hideshowbutton" onclick="showHideDiv('wifi_settings',this)" title="Show/Hide Wi-Fi Settings">+</button>Wi-Fi </h4>
+			
+				<div class="ad3d-settings">
+					<label id="wifiResponseText" class="ad3d-curlabel">current connection :</label>
 						<form id="wifi_settings" style="display:none" method="POST">
 							<input type="hidden" name="settings" value="wifi_settings">
 								<table width="100%">
@@ -139,8 +202,8 @@
 										<td id="fpassstr"><input type="password" class="ad3d-input" placeholder="Password" id="fpass" name="pass" maxlength="50"></td>
 									</tr>
 									<tr>
-										<td class="checkboxrow">Unprotected</td>
-										<td class="checkboxrow"><input type="checkbox" class="ad3d-input" id="funprotected" name="unprotected" onclick="unprotectedCheckbox()"></td>
+										<td class="ad3d-checkboxrow">Unprotected</td>
+										<td class="ad3d-checkboxrow"><input type="checkbox" class="ad3d-input" id="funprotected" name="unprotected" onclick="unprotectedCheckbox()"></td>
 									</tr>
 									<tr>
 										<td></td>
@@ -150,10 +213,11 @@
 						</form>
 				</div>
 		<hr>				
-		<h4>MQTT 
-			<button id="mqtt_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('mqtt_settings',this)" title="Show/Hide MQTT Settings">+</button></h4>
-				<div class="settings">
-					<label id="mqttResponseText">current connection:</label>
+		<h4>
+			<button id="mqtt_settings_button" class="ad3d-hideshowbutton" onclick="showHideDiv('mqtt_settings',this)" title="Show/Hide MQTT Settings">+</button>MQTT </h4>
+			
+				<div class="ad3d-settings">
+					<label id="mqttResponseText" class="ad3d-curlabel">current connection:</label>
 						<form id="mqtt_settings" style="display:none" method="POST">
 							<input type="hidden" name="settings" value="mqtt_settings">
 								<table width="100%">
@@ -180,8 +244,8 @@
 										<td colspan="2"><input type="text" class="ad3d-input" id="fmqtt_topic" name="mqtt_topic" maxlength="50"></td>
 									</tr>
 									<tr>
-										<td class="checkboxrow">MQTT Enabled</td>
-										<td class="checkboxrow" colspan="2" class="left"><input type="checkbox" class="ad3d-input" id="fmqtt_isEnabled" name="mqtt_isEnabled"></td>
+										<td class="ad3d-checkboxrow">MQTT Enabled</td>
+										<td class="ad3d-checkboxrow" colspan="2" class="left"><input type="checkbox" class="ad3d-input" id="fmqtt_isEnabled" name="mqtt_isEnabled"></td>
 									</tr>
 									<tr>
 										<td></td>
@@ -191,10 +255,10 @@
 						</form>
 				</div>
 	<hr>
-		<h4>NTS 
-			<button id="ntp_settings_button" class="ad3d-hideShowButton" onclick="showHideDiv('ntp_settings',this)" title="Show/Hide Network Time Server Settings">+</button></h4>
-				<div class="settings">
-					<label id="ntpResponseText">current connection:</label>
+		<h4>
+			<button id="ntp_settings_button" class="ad3d-hideshowbutton" onclick="showHideDiv('ntp_settings',this)" title="Show/Hide Network Time Server Settings">+</button>NTS </h4>
+				<div class="ad3d-settings">
+					<label id="ntpResponseText" class="ad3d-curlabel">current connection:</label>
 						<form id="ntp_settings" style="display:none" method="POST">
 							<input type="hidden" name="settings" value="ntp_settings">
 								<table width="100%">
@@ -252,7 +316,26 @@
 								</table>
 						</form>
 				</div>
-		</article>
+		<hr>		
+				<h4> 
+	<button class="ad3d-hideshowbutton" onclick="showHideDiv('otherSettingsForm',this)" title="Show/Hide Settings">+</button>Other Functions</h4>
+
+		<form id="otherSettingsForm" style="display:none" method="POST">
+			<div class="ad3d-uploadbox">
+			<label id="uploadResponseText" class="ad3d-infolabel">upload files (*.html, *.css, *.js) to the device.</label>
+				<div class="ad3d-uploadbtn-wrapper">
+					<button class="ad3d-button" title="Select a file" style="width: 100%; height:40px;">Upload a file</button>
+						<input type="file" name="myfile" accept=".gz,.html,.ico,.js,.css,.png,.txt" />
+					<button class="ad3d-button" type="submit" style="width: 100%; height:40px;" title="Upload selected file">submit</button>
+				</div> 
+			</div>
+			<div class="ad3d-restartbox">
+				<label id="restartResponseText" class="ad3d-infolabel">restart the device.</label>
+				<input class="ad3d-button" id="frestart" title="Restart the device." name="restart" style="width: 100%; height:94px;" onclick="restartESP()" value="Restart">
+			</div>		
+		</form>
+				
+		</article> 
 	
 	<footer class="footer">
 		<h1>Made by <a href="https://www.allday-3d.com" target="_blank">AD3D</a>.
@@ -260,5 +343,6 @@
 	</footer>
 </div>
 
+<script src="script_rgbslide.js"></script>
 </body>
 </html>

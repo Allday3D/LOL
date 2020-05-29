@@ -1,100 +1,272 @@
 
-.wrapper {
-  margin-left:  auto;
-  margin-right: auto;
-  max-width: 768px;
-  margin: 0 10px;
-  display: grid;
-  /* justify-content: space-evenly; */
-  align-content: center;
-  padding-right: 10px;
-  padding-left:  10px;
-  grid-gap: 10px;
+.ad3d-wrapper {
+	margin-left:  auto;
+	margin-right: auto;
+	max-width: 768px;
+	margin: 0 10px;
+	display: grid;
+	align-content: center;
+	padding-right: 10px;
+	padding-left:  10px;
+	grid-gap: 10px;
 }
 
-
-
-@media screen and (min-width: 640px) {
-
-  .wrapper {
+@media screen and (max-width: 600px) {
+	.ad3d-wrapper {
     margin: 0 auto;
 	align-content: center;
-	grid-template-rows: 100px auto auto auto auto;
-    grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 90px auto auto auto auto 50px;
+    grid-template-columns: 68% 32%;
 	grid-template-areas:
-	"header header header header"
-	"stateinfocolom stateinfocolom stateinfocolom stateinfocolom"
-	"colwheelcolom colwheelcolom colslidecolom colslidecolom"
-	"settingscolom settingscolom settingscolom settingscolom"
-	"footer footer footer footer";
-  }
-  
-  /* no grid support? */
-    .stateinfocolom {
-    float: left;
-	grid-area: stateinfocolom;
-	grid-column: 1 / -1;
-  }
-  
-    .settingscolom {
-    float: left;
-	grid-area: settingscolom;
-	grid-column: 1 / -1;
-  }
+	"header header"
+	"ad3d-stateinfocolom ad3d-stateinfocolom"
+	"ad3d-colwheelcolom ad3d-colwheelcolom"
+	"ad3d-colslidecolom ad3d-coleditcolom"
+	"ad3d-settingscolom ad3d-settingscolom"
+	"footer footer";
+	}
 
-    .colwheelcolom {
-    float: left;
-	grid-area: colwheelcolom;
-	/* grid-column: 1 / -1; */
-  }
+/* ------------------------------------- */
   
-    .colslidecolom {
+	/* no grid support? */
+    .ad3d-stateinfocolom {
     float: left;
-	grid-area: colslidecolom;
+	grid-area: ad3d-stateinfocolom;
+	background-color: var(--overlayMg);
+	grid-column: 1 / -1;
+	}
+  
+    .ad3d-settingscolom {
+    float: left;
+	grid-area: ad3d-settingscolom;
+	background-color: var(--overlayMg);
+	grid-column: 1 / -1;
+	}
+
+    .ad3d-colwheelcolom {
+    float: left;
+	grid-area: ad3d-colwheelcolom;
+	background-color: var(--articleBg);
+	grid-column: 1 / -1;
+	}
+	
+	.ad3d-coleditcolom {
+    float: left;
+	grid-area: ad3d-coleditcolom;
+	background-color: var(--articleBg);
 	/* grid-column: 1 / -1; */
-  }
+	}
+  
+    .ad3d-colslidecolom {
+    float: left;
+	grid-area: ad3d-colslidecolom;
+	background-color: var(--articleBg);
+	/* grid-column: 1 / -1; */
+	}
   
 	.header {
     grid-column: 1 / -1;
 	grid-area: header;
     /* needed for the floated layout */
+	background-color: var(--overlayBg);
+	border: 1px solid var(--topBg);
     clear: both;
-  }
+	}
   
   .footer {
     grid-column: 1 / -1;
 	grid-area: footer;
     /* needed for the floated layout */
+	background-color: var(--overlayBg);
+	border: 1px solid var(--topBg);
     clear: both;
-  }
+	}
+	
+	.ad3d-colorcanvas {
+	display: block;
+	margin-top: 10px;
+	margin-left: auto;
+    margin-right: auto;
+	float: none;
+	width: 100%;
+	min-width: 250px;
+	max-width: 250px;
+	}
 }
 
-.wrapper > * {
-  /* background-color: #282828; */
-  background-color: #7f7f7f;
-  /* color: #fff; */
-  border-radius: 5px;
+@media screen and (max-width: 768px) {
+	.ad3d-wrapper {
+    margin: 0 auto;
+	align-content: center;
+	grid-template-rows: 90px auto 320px auto auto 50px;
+    grid-template-columns: 73% 27%;
+	grid-template-areas:
+	"header header"
+	"ad3d-stateinfocolom ad3d-stateinfocolom"
+	"ad3d-colwheelcolom ad3d-coleditcolom"
+	"ad3d-colslidecolom ad3d-colslidecolom"
+	"ad3d-settingscolom ad3d-settingscolom"
+	"footer footer";
+	}
+  
+	/* no grid support? */
+    .ad3d-stateinfocolom {
+    float: left;
+	grid-area: ad3d-stateinfocolom;
+	background-color: var(--overlayMg);
+	grid-column: 1 / -1;
+	}
+  
+    .ad3d-settingscolom {
+    float: left;
+	grid-area: ad3d-settingscolom;
+	background-color: var(--overlayMg);
+	/* grid-column: 1 / -1; */
+	}
 
-  padding: 14px;
-  font-size: 100%;
-  /* needed for the floated layout
-  margin-bottom: 10px;*/
-
+    .ad3d-colwheelcolom {
+    float: left;
+	grid-area: ad3d-colwheelcolom;
+	background-color: var(--articleBg);
+	/* grid-column: 1 / -1; */
+	}
+	
+	.ad3d-coleditcolom {
+    float: left;
+	grid-area: ad3d-coleditcolom;
+	background-color: var(--articleBg);
+	/* grid-column: 1 / -1; */
+	}
+  
+    .ad3d-colslidecolom {
+    float: left;
+	grid-area: ad3d-colslidecolom;
+	background-color: var(--articleBg);
+	grid-column: 1 / -1; /* */
+	}
+  
+	.header {
+    grid-column: 1 / -1;
+	grid-area: header;
+    /* needed for the floated layout */
+	background-color: var(--overlayBg);
+	border: 1px solid var(--topBg);
+    clear: both;
+	}
+  
+  .footer {
+    grid-column: 1 / -1;
+	grid-area: footer;
+    /* needed for the floated layout */
+	background-color: var(--overlayBg);
+	border: 1px solid var(--topBg);
+    clear: both;
+	}
 }
+
+@media screen and (min-width: 768px) {
+	.ad3d-wrapper {
+    margin: 0 auto;
+	align-content: center;
+	grid-template-rows: 90px auto auto auto 50px;
+    grid-template-columns: 40% 42% 18%;
+	grid-template-areas:
+	"header header header "
+	"ad3d-stateinfocolom ad3d-stateinfocolom ad3d-stateinfocolom"
+	"ad3d-colwheelcolom ad3d-colslidecolom ad3d-coleditcolom"
+	"ad3d-settingscolom ad3d-settingscolom ad3d-settingscolom"
+	"footer footer footer";
+	}
+  
+	/* no grid support? */
+    .ad3d-stateinfocolom {
+    float: left;
+	grid-area: ad3d-stateinfocolom;
+	background-color: var(--overlayMg);
+	grid-column: 1 / -1;
+	}
+  
+    .ad3d-settingscolom {
+    float: left;
+	grid-area: ad3d-settingscolom;
+	background-color: var(--overlayMg);
+	grid-column: 1 / -1;
+	}
+
+    .ad3d-colwheelcolom {
+    float: left;
+	grid-area: ad3d-colwheelcolom;
+	background-color: var(--articleBg);
+	/* grid-column: 1 / -1; */
+	}
+	.ad3d-coleditcolom {
+    float: left;
+	grid-area: ad3d-coleditcolom;
+	background-color: var(--articleBg);
+	/* grid-column: 1 / -1; */
+	}
+  
+    .ad3d-colslidecolom {
+    float: left;
+	grid-area: ad3d-colslidecolom;
+	background-color: var(--articleBg);
+	/* grid-column: 1 / -1; */
+	}
+  
+	.header {
+    grid-column: 1 / -1;
+	grid-area: header;
+    /* needed for the floated layout */
+	background-color: var(--overlayBg);
+	border: 1px solid var(--topBg);
+    clear: both;
+	}
+  
+	.footer {
+    grid-column: 1 / -1;
+	grid-area: footer;
+    /* needed for the floated layout */
+	background-color: var(--overlayBg);
+	border: 1px solid var(--topBg);
+    clear: both;
+	}
+  
+	.titlewidth {
+	width:40%
+	}
+}
+
+.ad3d-wrapper > * {
+	color: var(--baseFg);
+	border-radius: var(--radius);
+	padding: 10px;
+	font-size: 100%;
+	grid-template-areas:
+	"header header header "
+	"ad3d-stateinfocolom ad3d-stateinfocolom ad3d-stateinfocolom"
+	"ad3d-colwheelcolom ad3d-colslidecolom ad3d-coleditcolom"
+	"ad3d-settingscolom ad3d-settingscolom ad3d-settingscolom"
+	"footer footer footer";
+	}
 
 /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
 @supports (display: grid) {
-  .wrapper > * {
+	.ad3d-wrapper > * {
     width: auto;
     margin: 0;
-  }
+	}
 }
 
 header h1 {
 	text-indent: 10px;
     text-align: left;
     font-size: 2em;
-    color: #282828;
+    color: var(--baseFg);
+	margin-top: -0.14em;
+	margin-bottom: 0.12em;
+	margin-left: 0;
+	margin-right: 0;
+	font-weight: bold;
     padding-bottom: 1px;
 	padding-top: 0px;
 }

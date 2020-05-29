@@ -1,0 +1,39 @@
+
+/* ---------------------------------------- */
+
+.ad3d-uploadbtn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+.ad3d-uploadbtn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.ad3d-uploadbox {
+  border-radius: 5px;
+	border: 1px solid var(--topBg);
+	background-color: var(--articleBg);
+  position: relative;
+  margin: 5px;
+  padding: 2px 10px 10px 10px;
+  float: right;
+  width: 65%;
+}
+
+.ad3d-restartbox {
+	border-radius: 5px;
+	border: 1px solid var(--topBg);
+	position: relative;
+	background-color: var(--articleBg);
+	margin: 5px;
+	padding: 2px 10px 10px 10px;
+	float: left;
+	width: 29%;
+}

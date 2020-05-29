@@ -1,26 +1,28 @@
 /*----------------------------------------------------------*/
 
-.inputs-list {
-	margin-top: 15px;
-	margin-left: auto;
-    margin-right: auto;
+.ad3d-inputslist {
+	display: block;
+	margin: 5px;
 	float: none;
-	width: 90%;
+	width: 100%;
 	}
 
-.color-canvas {
+.ad3d-colorcanvas {
+	display: block;
+	margin-top: 20px;
 	margin-left: auto;
     margin-right: auto;
 	float: none;
-	width: 90%;
-	min-width: 280px;
+	width: 100%;
+	min-width: 250px;
+	max-width: 250px;
 	}
 
 /*----------------------------------------------------------*/
 
 #ad3d-colorwheeldisplay{
 	margin: 10px 15px 10px 1px;
-	padding: 10px 10px 10px 10px;
+	padding: 1px 10px 10px 10px;
 	border-radius: 6px;
 }
 
@@ -33,46 +35,3 @@
 #ad3d-colorwheeldisplay.assigned::before{
 	content: '';
 }
-
-/*----------------------------------------------------------
-
-
-@media only screen and (max-width: 768px) {
-	.inputs-list {
-	margin: 10px 10px 10px 10px;
-	padding-left: 30px; 
-	float: right;
-	width: 100%;
-	}
-
-.color-canvas {
-	float: none;
-	position: relative;
-	padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-	width: 280;
-	}
-}
-
-
-@media screen and (max-width: 600px) {
-	.inputs-list {
-	margin: 30px 10px 10px 30px;
-	padding-left: 30px; 
-	float: right;
-	width: 100%;
-	}
-	
-	.color-canvas {
-	float: none;
-	min-width: 280;
-	padding-left: 0;
-    padding-right: 0;
-    margin-left: 30px;
-    margin-right: auto;
-    display: block;
-	}
-}*/

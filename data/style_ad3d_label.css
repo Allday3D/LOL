@@ -1,0 +1,156 @@
+/*----------------------------------------------------------*/
+
+/*----------------------------------------------------------*/
+
+.ad3d-smStateLabel{
+  text-align: left;
+  text-transform: uppercase;
+  color: #dcdcdc;
+  /*background-color: #282828;*/
+  display: inline-block;
+  font-size: 0.6em;
+  margin-top: 0.0em;
+  margin-bottom: 0.02em;
+  margin-left: 4px;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.ad3d-smInfoLabel{
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--baseFg);
+  /*background-color: #282828;*/
+  display: inline-block;
+  font-size: 0.6em;
+  margin-top: 0.0em;
+  margin-bottom: 0.02em;
+  margin-left: 4px;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+/*----------------------------------------------------------*/
+
+.ad3d-devicelabel{
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--accentFg);
+  display: block;
+  font-size: 2.2em;
+  margin-top: -0.14em;
+  margin-bottom: 0.06em;
+  margin-left: 86px;
+  margin-right: 0;
+  font-weight: bold;
+}
+/*----------------------------------------------------------*/
+
+.ad3d-statelabel{
+  text-align: left;
+  text-transform: uppercase;
+  color: #111111;
+  /*background-color: #282828;*/
+  display: block;
+  font-size: 0.9em;
+  margin-top: 0.12em;
+  margin-bottom: 0.02em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+/*----------------------------------------------------------*/
+
+.ad3d-curlabel{
+  text-align: left;
+  text-transform: uppercase;
+  color: #282828;
+  display: block;
+  font-size: 0.67em;
+  margin-top: 0.12em;
+  margin-bottom: 0.06em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+/*----------------------------------------------------------*/
+
+.ad3d-functionlabel {
+	
+  text-align: left;
+  text-transform: uppercase;
+  color: #dcdcdc;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-top: 0.12em;
+  /* margin-bottom: 0.8em;*/
+  margin-left: 0.4em;
+  margin-right: 0.12em;
+  font-weight: bold;
+}
+
+.ad3d-smfunctionlabel {
+  float: right;
+  text-align: right;
+  /* text-transform: uppercase;*/
+  color: var(--baseFg);
+  display: block;
+  font-size: 0.6em;
+  margin-top: 0.6em;
+  margin-left: 0;
+  margin-right: 0.4em;
+  width: 40px;
+  font-weight: bold;
+}
+
+/*----------------------------------------------------------*/
+
+.ad3d-infolabel {
+	
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--baseFg);
+  display: block;
+  font-size: 0.67em;
+  margin-top: 0.5em;
+  margin-bottom: 0.8em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+/*----------------------------------------------------------*/
+
+.ad3d-timelabel {
+  font-family:'Orator Std';
+  text-align: left;
+  text-transform: lowercase;
+  color: #dcdcdc;
+  display: block;
+  font-size: 10pt;
+  margin-top: -4px;
+  margin-bottom: 0.06em;
+  margin-left: 86px;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+/*----------------------------------------------------------*/
+
+.ad3d-datelabel {
+  font-family:'Orator Std';
+  text-align: left;
+  text-transform: lowercase;
+  color: #dcdcdc;
+  display: block;
+  font-size: 10pt;
+  margin-top: 0px;
+  margin-bottom: 0.06em;
+  margin-left: 86px;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+/*----------------------------------------------------------*/

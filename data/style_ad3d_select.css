@@ -34,7 +34,7 @@
   width: 99%;
   height: 30px;
   padding: 0.65em 2.5em 0.55em 0.75em;
-  border-radius: 2px;
+  border-radius: 5px;
   background-color: #282828;
   background-image: linear-gradient(#686868, #686868),
     linear-gradient(-135deg, transparent 50%, #686868 50%),
@@ -72,9 +72,9 @@
   line-height: 1;
   outline: 0;
   width: 100%;
-  height: 30px;
-  padding: 0.65em 2.5em 0.55em 0.75em;
-  margin: 6px;
+  height: 36px;
+  padding: 0.65em 0.5em 0.55em 0.75em;
+  margin: 7px;
   border-radius: var(--radius);
   float: right;
   cursor: pointer;
@@ -98,9 +98,9 @@
   line-height: 1;
   outline: 0;
   width: 100%;
-  height: 30px;
-  padding: 0.65em 2.5em 0.55em 0.75em;
-  margin: 6px;
+  height: 36px;
+  padding: 0.65em 0.5em 0.55em 0.75em;
+  margin: 7px;
   border-radius: var(--radius);
   float: right;
   cursor: pointer;
@@ -124,9 +124,9 @@
   line-height: 1;
   outline: 0;
   width: 100%;
-  height: 30px;
-  padding: 0.65em 2.5em 0.55em 0.75em;
-  margin: 6px;
+  height: 36px;
+  padding: 0.65em 0.5em 0.55em 0.75em;
+  margin: 7px;
   border-radius: var(--radius);
   float: right;
   cursor: pointer;
